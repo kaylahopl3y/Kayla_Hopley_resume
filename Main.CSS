@@ -1,0 +1,545 @@
+html {
+  scroll-behavior: smooth; }
+
+/* Found font online */ 
+body {
+  font-family: 'Press Start 2P', sans-serif; }
+
+/* Change the colour when hovering over from white to purple */
+nav {
+  background: inherit; }
+  nav ul {
+    background: #fff0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5em; }
+  nav a {
+    color: white;
+    text-decoration: none; }
+  nav a:hover {
+    background: white;
+    color: mediumpurple; }
+  nav #about-me:hover #aboutList {
+    color: mediumpurple; }
+
+/* Edit the button that has no functionality but is cool */ 
+#btn {
+  border: 3px white solid;
+  border-radius: 10px;
+  background: black;
+  color: azure;
+  width: 10;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-family: 'Press Start 2P', sans-serif;
+  padding: 10px; }
+
+/* Change button colouring when hovering */
+#btn:hover {
+  background: black;
+  color: mediumpurple; }
+
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+.dropdown-content {
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+
+/* Set colour of dropdown content to purple */ 
+.dropdown-content a {
+  color: mediumpurple;
+  text-decoration: none; }
+
+.dropdown-content a:hover {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41; }
+
+/* The title colours and background */
+header {
+  text-shadow: 2px 2px 2px black;
+  color: aliceblue;
+  font-family: 'Press Start 2P', sans-serif; }
+  header p {
+    font-size: 2em; }
+  header span {
+    font-size: 3em; }
+
+.about-me {
+  color: azure;
+  font-size: 1em;
+  font-family: 'Press Start 2P', sans-serif; }
+
+article {
+  color: azure;
+  font-family: 'Press Start 2P', cursive;
+  /* The actual timeline (the vertical ruler) */ }
+  article h2 {
+    font-size: 2em;
+    background-color: black;
+    color: black; }
+  article .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1em; }
+  article .container::after {
+    content: '';
+    width: 6px;
+    background-color: azure; }
+
+/* Bottom part where contact me is located in */
+.footer {
+  background: #000;
+  color: azure;
+  text-align: center;
+  padding: 50px; }
+  .footer h3 {
+    font-size: 50px;
+    padding: 5% 0 0 0;
+    animation: icon3d 200ms 10;
+    color: #fff;
+    margin: auto; }
+    .footer h3:hover {
+      animation: icon3d 200ms infinite; }
+  .footer a {
+    color: azure;
+    text-decoration: none; }
+    .footer a:hover {
+      animation: icon3d 200ms infinite; }
+
+/* All icons are located */
+.flex-center {
+  width: 70%;
+  height: 200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.icon-3d {
+  animation: icon3d 200ms 10;
+  color: #fff; }
+  .icon-3d:hover {
+    animation: icon3d 200ms infinite; }
+
+.flex-center .whatsapp {
+  visibility: hidden;
+  width: 200px;
+  background-color: azure;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1; }
+
+.flex-center:hover .whatsapp {
+  visibility: visible; }
+
+/* Changes colours when hovering */
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px #f44336, -5px -6px #2196f3; }
+  25% {
+    text-shadow: -5px -6px #f44336, 5px 4px #2196f3; }
+  50% {
+    text-shadow: 5px -4px #f44336, -8px 4px #2196f3; }
+  75% {
+    text-shadow: -8px -4px #f44336, -5px -4px #2196f3; }
+  100% {
+    text-shadow: -5px 0 #f44336, 5px -4px #2196f3; } }
+body {
+  margin: 0;
+  padding: 0; }
+
+nav li {
+  display: inline-block; }
+nav a {
+  display: inline-block;
+  padding: 18px 16px; }
+nav img {
+  position: absolute;
+  height: 100px;
+  width: 100px; }
+nav #aboutList {
+  position: absolute;
+  display: block;
+  padding: 12px 16px; }
+nav #about-me:hover #aboutList {
+  display: inline-block; }
+
+#btn {
+  border: 3px white solid;
+  border-radius: 10px;
+  width: 10;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px; }
+
+#btn:hover {
+  border: 3px azure solid; }
+
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1; }
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  height: 100vh;
+  position: justify;
+  text-shadow: 2px 2px 2px black; }
+  header span {
+    display: block;
+    margin: 0 auto; }
+  header #gif {
+    display: none; }
+
+.about-me {
+  height: 50vh;
+  position: justify;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 50px 0 50px; }
+  .about-me div {
+    display: block; }
+
+article {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  z-index: 100;
+  text-align: center; }
+  article h2 {
+    font-size: 2em;
+    background-color: white;
+    padding: 10px; }
+  article .grid-item {
+    text-align: right;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    position: relative;
+    border-radius: 6px; }
+    article .grid-item div {
+      padding: 20px; }
+  article .grid-item2 {
+    text-align: left;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    position: relative;
+    border-radius: 6px; }
+    article .grid-item2 div {
+      padding: 20px; }
+  article .grid-item3 {
+    text-align: right;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    position: relative;
+    border-radius: 6px; }
+    article .grid-item3 div {
+      padding: 20px; }
+  article .grid-item4 {
+    text-align: left;
+    grid-row-start: 4;
+    grid-column-start: 2;
+    position: relative;
+    border-radius: 6px; }
+    article .grid-item4 div {
+      padding: 20px; }
+  article .grid-item5 {
+    text-align: right;
+    grid-row-start: 5;
+    grid-column-start: 1;
+    position: relative;
+    border-radius: 6px; }
+    article .grid-item5 div {
+      padding: 20px; }
+  article .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+  article .container {
+    position: relative;
+    margin: 0 auto; }
+  article .container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px; }
+
+.work {
+  text-align: center;
+  background-color: yellow; }
+  .work h1 {
+    padding: 50px 0 50px 0; }
+  .work .grid-containerWork {
+    display: grid;
+    align-content: space-evenly;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    width: 80%;
+    margin: auto; }
+    .work .grid-containerWork img {
+      width: 90%;
+      height: auto;
+      padding-bottom: 10vh;
+      border-radius: 2%; }
+
+.skills2 {
+  display: flex;
+  min-height: 15vh;
+  height: auto;
+  align-items: center;
+  grid-template-columns: 6fr;
+  grid-gap: 10px;
+  justify-content: space-evenly;
+  padding: 30px 0 30px 0; }
+  .skills2 img {
+    width: 80px;
+    height: auto; }
+
+.menu {
+  display: none;
+  transition: 0.1s transform linear;
+  position: sticky;
+  background: 0;
+  float: none;
+  margin: 2rem;
+  height: 2.7rem;
+  width: 3.5rem;
+  z-index: 1;
+  outline: 0;
+  padding: 0;
+  border: 0;
+  top: 0; }
+
+.bar, .bar::before, .bar::after {
+  transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s transform linear;
+  position: absolute;
+  background: white;
+  margin: auto;
+  width: 100%;
+  height: 0.3rem;
+  content: '';
+  top: 50%;
+  left: 0; }
+.bar {
+  margin-top: -0.2rem; }
+.bar::before {
+  top: -1.2rem; }
+.bar::after {
+  top: 1.2rem; }
+.bar::before, .bar::after {
+  transform: rotate(0deg); }
+.active .bar {
+  background: 0; }
+  .active .bar::before {
+    transform: rotate(45deg); }
+  .active .bar::after {
+    transform: rotate(-45deg); }
+  .active .bar::before, .active .bar::after {
+    top: 0; }
+  .active .bar, .active .bar::before, .active .bar::after {
+    transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s; }
+
+.mobile {
+  width: 200px;
+  height: 100%;
+  background: azure;
+  position: fixed;
+  transform: translateX(-250px);
+  transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+  padding-top: 3.2rem;
+  display: none; }
+  .menu-open .mobile {
+    transform: translateX(0); }
+  .mobile ul {
+    margin: 0;
+    list-style: none;
+    padding: 0; }
+    .mobile ul li {
+      padding: 20px 5px;
+      font-size: 30px; }
+      .mobile ul li a {
+        text-decoration: none;
+        color: white; }
+      .mobile ul li:hover {
+        background: azure; }
+
+@media (max-width: 650px) {
+  body {
+    margin: 0;
+    padding: 0; }
+
+  .parrallax {
+    display: none; }
+
+  .navBar {
+    display: flex; }
+
+  nav {
+    display: none; }
+
+  .mobile {
+    display: block;
+    height: 40%; }
+    .mobile ul li {
+      padding: 0;
+      margin: 0; }
+      .mobile ul li a {
+        font-size: 0.4em; }
+
+  .menu {
+    display: block;
+    font-size: 0.5em; }
+
+  header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    height: auto;
+    position: justify;
+    text-shadow: 2px 2px 2px black;
+    margin: auto;
+    font-size: .9em;
+    text-align: center; }
+    header span {
+      display: block;
+      margin: 0 auto;
+      font-size: 1em; }
+      header span p {
+        font-size: 0.5em; }
+    header #gif {
+      display: none; }
+
+  .about-me {
+    height: 50vh;
+    position: justify;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 50px 0 50px; }
+    .about-me p {
+      font-size: 0.7em; }
+    .about-me div {
+      display: block; }
+
+  article {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    margin: auto; }
+    article h2 {
+      font-size: 2em;
+      background-color: white;
+      padding: 10px; }
+    article .grid-item {
+      text-align: center;
+      grid-row-start: 1;
+      grid-column-start: 1;
+      position: relative;
+      border-radius: 6px; }
+      article .grid-item div {
+        padding: 20px; }
+    article .grid-item2 {
+      text-align: center;
+      grid-row-start: 2;
+      grid-column-start: 1;
+      position: relative;
+      border-radius: 6px; }
+      article .grid-item2 div {
+        padding: 20px; }
+    article .grid-item3 {
+      text-align: center;
+      grid-row-start: 3;
+      grid-column-start: 1;
+      position: relative;
+      border-radius: 6px; }
+      article .grid-item3 div {
+        padding: 20px; }
+    article .grid-item4 {
+      text-align: center;
+      grid-row-start: 4;
+      grid-column-start: 1;
+      position: relative;
+      border-radius: 6px; }
+      article .grid-item4 div {
+        padding: 20px; }
+    article .grid-item5 {
+      text-align: center;
+      grid-row-start: 5;
+      grid-column-start: 1;
+      position: relative;
+      border-radius: 6px; }
+      article .grid-item5 div {
+        padding: 20px; }
+    article .container {
+      display: grid;
+      grid-template-columns: auto;
+      font-size: 0.7em; }
+    article .container::after {
+      content: '';
+      width: 0; }
+
+  .skills2 {
+    display: grid;
+    min-height: 15vh;
+    height: auto;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    justify-content: space-evenly;
+    padding: 30px 0 30px 0;
+    font-size: 0.8em; }
+    .skills2 img {
+      width: 4em;
+      height: auto; } }
+.footer {
+  font-size: 0.5em; }
+  .footer h3 {
+    font-size: 3.5em; }
+  .footer span {
+    font-size: 1em; }
+  .footer .flex-center .whatsapp {
+    width: 85px; }
+  .footer a {
+    font-size: 1.2em; }
